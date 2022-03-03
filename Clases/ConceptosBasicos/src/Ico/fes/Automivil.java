@@ -51,12 +51,11 @@ public class Automivil {
     public void setModelo(int modelo) {
         this.modelo = modelo;
     }
-
+    
     @Override
     public String toString() {
         return "Automivil{" + "marca=" + marca + ", subMarca=" + subMarca + ", modelo=" + modelo + ", color=" + color + '}';
     }
-    
     
     
     
