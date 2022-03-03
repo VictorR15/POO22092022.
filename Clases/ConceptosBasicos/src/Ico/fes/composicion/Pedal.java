@@ -30,6 +30,11 @@ public class Pedal {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    @Override
+    public String toString() {
+        return "Pedal{" + "marca=" + marca + ", material=" + material + '}';
+    }
     
     
     
