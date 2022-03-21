@@ -1,6 +1,7 @@
 package tareapoo2209;
 
 import entretenimiento.Biblioteca;
+import entretenimiento.Blockbuster;
 
 public class TareaPOO2209 {
     
@@ -16,25 +17,26 @@ public class TareaPOO2209 {
         
         Biblioteca entre1 = new Biblioteca();
         entre1.setTipoDeEntretenimiento("Libro");
-        
         entre1.getAutor().setNombre("Octavio Paz");
         entre1.getAutor().setEdad(84);
-        entre1.getDitorial().setLibrosImpresos(8);
-        entre1.getDitorial().setNombreEmpresa("Fundacion Octavio Paz");
+        entre1.getEditorial().setNombreEmpresa("Fundacion Octavio Paz");
+        entre1.getEditorial().setLibrosImpresos(8);
+        
         
         System.out.println(entre1);
         
         //PELICULA
         
-        Biblioteca entre2 = new Biblioteca();
-        entre2.setTipoDeEntretenimiento("Pelicula");
+        Blockbuster entre2 = new Blockbuster();
+        entre2.setTipodeEntre("Pelicula");
         entre2.getActor().setNombreAc("Jose");
         entre2.getActor().setEdadAc(30);
-        entre2.getDireccion().setNombre("Pepe");
-        entre2.getDireccion().setEdad(50);
-        entre2.getProduccion().setNombreDeProductora("Aztelevi");
-        entre2.getProduccion().setDueñoDeProductora("Papi AMLO");
+        entre2.getDirector().setNombre("Pepito");
+        entre2.getDirector().setEdad(50);
+        entre2.getProductora().setNombreDeProductora("El milaneso");
+        entre2.getProductora().setDueñoDeProductora("Papi AMLO");
         System.out.println(entre2);
+        
         
         
         
