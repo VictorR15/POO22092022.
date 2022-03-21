@@ -1,5 +1,5 @@
 
-package tareapoo2209;
+package tarea.libro1;
 
 import java.awt.Color;
 
@@ -9,8 +9,8 @@ public class Libro {
     //Atributos
     
     private String titulo;
-    private String autor;
-    private String editorial;
+    private String autorJefe;
+    private String editorialjose;
     private int numeroDePaginas;
     private Color color;
 
@@ -19,8 +19,8 @@ public class Libro {
 
     public Libro(String titulo, String autor, String editorial, int numeroDePaginas, Color color) {
         this.titulo = titulo;
-        this.autor = autor;
-        this.editorial = editorial;
+        this.autorJefe = autor;
+        this.editorialjose = editorial;
         this.numeroDePaginas = numeroDePaginas;
         this.color = color;
     }
@@ -42,19 +42,19 @@ public class Libro {
     }
 
     public String getAutor() {
-        return autor;
+        return autorJefe;
     }
 
     public void setAutor(String autor) {
-        this.autor = autor;
+        this.autorJefe = autor;
     }
 
     public String getEditorial() {
-        return editorial;
+        return editorialjose;
     }
 
     public void setEditorial(String editorial) {
-        this.editorial = editorial;
+        this.editorialjose = editorial;
     }
 
     public int getNumeroDePaginas() {
@@ -67,7 +67,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", editorial=" + editorial + ", numeroDePaginas=" + numeroDePaginas + ", color=" + color + '}';
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autorJefe + ", editorial=" + editorialjose + ", numeroDePaginas=" + numeroDePaginas + ", color=" + color + '}';
     }
 
     
