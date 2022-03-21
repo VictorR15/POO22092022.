@@ -36,5 +36,10 @@ public class Autor {
         return "Autor{" + "nombre=" + nombreAu + ", edad=" + edadAu + '}';
     }
     
+    public void escribir(){
+        
+        System.out.println(this.nombreAu + "Esta escribiendo");
+        
+    }
    
 }

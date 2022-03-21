@@ -9,60 +9,62 @@ import pelicula.Productara;
 
 public class Biblioteca {
 
-    private Autor nombreAutor;
-    private Editorial nombreEmpresa;
-    private Actor nombreActor;
-    private Director direccion;
-    private Productara produccion;
+     private String tipoDeEntretenimiento;
+     private Autor autor;
+     private Editorial editorial;
+     private Actor actor;
+     private Director direccion;
+     private Productara produccion;
 
     public Biblioteca() {
     
-        nombreAutor = new Autor();
-        nombreEmpresa = new Editorial();
-        nombreActor = new Actor();
+        autor = new Autor();
+        editorial = new Editorial();
+        actor = new Actor();
         direccion = new Director();
         produccion = new Productara();
         
     }
 
-    public Biblioteca(Autor nombre, Editorial nombreEmpresa, Actor nombreActor, Director direccion, Productara produccion) {
-        this.nombreAutor = nombre;
-        this.nombreEmpresa = nombreEmpresa;
-        this.nombreActor = nombreActor;
+    public Biblioteca(String tipoDeEntretenimiento, Autor autor, Editorial Editorial, Actor actor, Director direccion, Productara produccion) {
+        this.tipoDeEntretenimiento = tipoDeEntretenimiento;
+        this.autor = autor;
+        this.editorial = Editorial;
+        this.actor = actor;
         this.direccion = direccion;
         this.produccion = produccion;
     }
 
-    public Productara getProduccion() {
-        return produccion;
+    public String getTipoDeEntretenimiento() {
+        return tipoDeEntretenimiento;
     }
 
-    public void setProduccion(Productara produccion) {
-        this.produccion = produccion;
+    public void setTipoDeEntretenimiento(String tipoDeEntretenimiento) {
+        this.tipoDeEntretenimiento = tipoDeEntretenimiento;
     }
 
-    public Autor getNombre() {
-        return nombreAutor;
+    public Autor getAutor() {
+        return autor;
     }
 
-    public void setNombre(Autor nombre) {
-        this.nombreAutor = nombre;
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
-    public Editorial getNombreEmpresa() {
-        return nombreEmpresa;
+    public Editorial getDitorial() {
+        return editorial;
     }
 
-    public void setNombreEmpresa(Editorial nombreEmpresa) {
-        this.nombreEmpresa = nombreEmpresa;
+    public void setDitorial(Editorial ditorial) {
+        this.editorial = ditorial;
     }
 
-    public Actor getNombreActor() {
-        return nombreActor;
+    public Actor getActor() {
+        return actor;
     }
 
-    public void setNombreActor(Actor nombreActor) {
-        this.nombreActor = nombreActor;
+    public void setActor(Actor actor) {
+        this.actor = actor;
     }
 
     public Director getDireccion() {
@@ -73,16 +75,23 @@ public class Biblioteca {
         this.direccion = direccion;
     }
 
+    public Productara getProduccion() {
+        return produccion;
+    }
+
+    public void setProduccion(Productara produccion) {
+        this.produccion = produccion;
+    }
+
     @Override
     public String toString() {
-        return "Biblioteca{" + "nombre=" + nombreAutor + ", nombreEmpresa=" + nombreEmpresa + ", nombreActor=" + nombreActor + ", direccion=" + direccion + ", produccion=" + produccion + '}';
+        return "Biblioteca{" + "tipoDeEntretenimiento=" + tipoDeEntretenimiento + ", autor=" + autor + ", ditorial=" + editorial + ", actor=" + actor + ", direccion=" + direccion + ", produccion=" + produccion + '}';
     }
 
     
-    
-    
+     
+     
 
-    
     
     
 

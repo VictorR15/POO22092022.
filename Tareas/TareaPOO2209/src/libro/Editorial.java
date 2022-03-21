@@ -35,6 +35,10 @@ public class Editorial {
     public String toString() {
         return "Editorial{" + "nombreEmpresa=" + nombreEmpresa + ", librosImpresos=" + librosImpresos + '}';
     }
-    
+    public void imprimir(){
+        
+        System.out.println(this.nombreEmpresa + "Esta imprimiendo");
+        
+    }
     
 }

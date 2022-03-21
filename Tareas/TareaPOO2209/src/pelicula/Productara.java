@@ -36,5 +36,10 @@ public class Productara {
         return "Productara{" + "nombreDeProductora=" + nombreDeProductora + ", due\u00f1oDeProductora=" + dueñoDeProductora + '}';
     }
     
+    public void grabando(){
+        
+        System.out.println(this.nombreDeProductora + "Esta grabando");
+        
+    }
     
 }

@@ -36,6 +36,10 @@ public class Director {
         return "Director{" + "nombre=" + nombreDi + ", edad=" + edadDi + '}';
     }
     
-    
+    public void dirigiendo(){
+        
+        System.out.println(this.nombreDi + "Esta dirigiendo");
+        
+    }
     
 }

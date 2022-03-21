@@ -4,37 +4,45 @@ package pelicula;
 
 public class Actor {
     
-    private String nombreAc;
-    private String edadAc;
+     private String nombreAc;
+      private int edadAc;
 
     public Actor() {
     }
 
-    public Actor(String nombre, String edad) {
-        this.nombreAc = nombre;
-        this.edadAc = edad;
+    public Actor(String nombreAc, int edadAc) {
+        this.nombreAc = nombreAc;
+        this.edadAc = edadAc;
     }
 
-    public String getEdad() {
+    public int getEdadAc() {
         return edadAc;
     }
 
-    public void setEdad(String edad) {
-        this.edadAc = edad;
+    public void setEdadAc(int edadAc) {
+        this.edadAc = edadAc;
     }
 
-    public String getNombre() {
+    public String getNombreAc() {
         return nombreAc;
     }
 
-    public void setNombre(String nombre) {
-        this.nombreAc = nombre;
+    public void setNombreAc(String nombreAc) {
+        this.nombreAc = nombreAc;
     }
 
     @Override
     public String toString() {
-        return "Actor{" + "nombre=" + nombreAc + ", edad=" + edadAc + '}';
+        return "Actor{" + "nombreAc=" + nombreAc + ", edadAc=" + edadAc + '}';
     }
+      
+      public void actuar(){
+        
+        System.out.println(this.nombreAc + "Esta actuando");
+        
+    }
+
+    
     
     
     
