@@ -89,7 +89,10 @@ public class Biblioteca {
     }
 
     
-     
+     public void vender(){
+         
+         System.out.println(this.tipoDeEntretenimiento + "Fue vendido");
+     }
      
 
     
