@@ -7,6 +7,9 @@ import ico.fes.componentes.Mouse;
 import ico.fes.componentes.Procesador;
 import ico.fes.componentes.Teclado;
 import ico.fes.herencia.Alumno;
+import ico.fes.herencia.Servidor;
+import ico.fes.herencia.poliformismo.Animal;
+import ico.fes.herencia.poliformismo.Perro;
 import javax.swing.JFrame;
 
 
@@ -49,7 +52,9 @@ public class ReutilizacionCodigo2209 {
         compu2.getRaton().setTipo("Touch");
         System.out.println( compu2 );
         
-        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        //Para cambiar los valonres en compocicion se necesita usar .get y despues .set como esta en el ejemplo de arriba
+        
+        System.out.println("-----------------------------------------------");
         
         Alumno alu1 = new Alumno();
         alu1.setNombre("José");
@@ -58,6 +63,38 @@ public class ReutilizacionCodigo2209 {
         Alumno alu2 = new Alumno("23156132","ICO","Jose Perez",19);
         System.out.println(alu2);
                
+        alu1.setNumeroCuenta("45242245");
+        System.out.println(alu1);
+        
+        //Para cambiar los valoren en herencia se necesita usar solo .set como en el ejemplo de arriba
+        
+        
+        System.out.println("------------------ Composicion y herenecia en la misma clase---------------");
+        
+        Servidor server = new Servidor();
+        System.out.println(server);
+        
+        server.setNumeroTarjetasRed(2);
+        System.out.println(server);
+        
+        server.setMarca("HP");
+        System.out.println(server);
+        
+        server.setRaton(new Mouse("LG", "Optico"));
+        System.out.println(server);
+        
+        server.getRaton().setMarca("Logitech");
+        System.out.println(server);
+        
+        
+        System.out.println("----------Ejemplo polimorfismo------------");
+        Perro dog = new Perro("Bulldog", "5 estrellas", 4);
+        Animal animal1 = new Animal(4);
+        dog.emitirSonido();
+        animal1.emitirSonido();
+        
+        
+        
     }
     
     
