@@ -1,6 +1,9 @@
 
 package javabasico2209;
 
+import java.util.ArrayList;
+import javax.swing.text.StyledEditorKit;
+
 
 public class Alumno {
     
@@ -53,4 +56,9 @@ public class Alumno {
         return this.promedio > 8.0f?"Sobresaliente":"Regular";
     }
     
+    ArrayList<Alumno> grupo2209 = new ArrayList<Alumno>();
+    
+    
+    
+       
 }
