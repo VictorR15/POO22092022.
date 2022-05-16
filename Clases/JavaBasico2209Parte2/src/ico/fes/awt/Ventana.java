@@ -8,15 +8,12 @@ public class Ventana extends Frame {
     private String titulo;
 
     public Ventana() throws HeadlessException {
-        
-        
     }
 
     public Ventana(String titulo) throws HeadlessException {
         super(titulo);
         this.setSize(400, 600);
         this.setVisible(true);
-        
     }
 
     public String getTitulo() {
@@ -31,6 +28,8 @@ public class Ventana extends Frame {
     public String toString() {
         return "Ventana{" + "titulo=" + titulo + '}';
     }
+
+    
     
     
     

@@ -33,9 +33,9 @@ public class Javabasico2209 {
         System.out.println("Tronco de un arbol = "+Arbol.tronco);
         Arbol.generararOxigeno();
         
-        /*Un atributo de clase o un metodo de clase (miembro) son indentificadores 
+        /*Un atributo de clase o un metodo de clase (elemento miembro) son indentificadores 
         que almacenan un valor constante o un comportamiento constante igual para 
-        todos los objetos de la misma. Al ser constrantes no es necesario crear 
+        todos los objetos de la misma. Al ser constantes no es necesario crear 
         una instancia (objetos).*/
         
         //JOptionPane.showMessageDialog(null, "Hola mundo", "Aqui va el titulo", JOptionPane.ERROR_MESSAGE);
@@ -57,6 +57,8 @@ public class Javabasico2209 {
         }
         
         System.out.println(resultado);
+        
+        //  <condicion>? <True> : <False>;
         
         int edad4=24;
         String res = "";
@@ -112,6 +114,8 @@ public class Javabasico2209 {
         lista [3] = new Alumno ("88888",2,8.0f);
         lista [4] = new Alumno ("66666",2,6.0f);
         
+        //lista.legth en donde length es la longitud 
+        
         for (int i = 0; i < lista.length; i++) {
             Alumno alumno = lista[i];
             System.out.println(alumno.evaluarDesempenio());
@@ -124,6 +128,9 @@ public class Javabasico2209 {
             
         }
         
+        System.out.println("---------------------------------------");
+        
+        //-----------ARRAYLIST-------------
         
         ArrayList<Alumno> grupo2209 = new ArrayList<Alumno>();
         

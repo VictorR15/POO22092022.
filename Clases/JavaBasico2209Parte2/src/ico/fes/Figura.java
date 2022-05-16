@@ -12,5 +12,8 @@ public interface Figura {
     
     public abstract float calcularArea();
     
+    //Para las interfases en esquemas deben de ir como
+    //<<*Nombre de la interface*>>
+    
     
 }

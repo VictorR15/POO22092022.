@@ -80,7 +80,7 @@ public class EstudianteDeportistaArtista extends Persona implements Deportista,A
     @Override
     public void ensayar() {
         
-        System.out.println(this.nombre + " Esta ensayando/practica " + this.generoArtistico);
+        System.out.println(this.nombre + " Esta ensayando/practicando " + this.generoArtistico);
     }
 
     @Override
