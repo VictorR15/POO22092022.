@@ -1,18 +1,24 @@
 
 package ico.fes.swing;
 
+import ico.fes.herencia.Persona;
+import ico.fes.modelo.ModeloPersonaCombo;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.HeadlessException;
+import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 
@@ -21,6 +27,9 @@ public class VentanaSwing extends JFrame {
     private JTextField cuadro;
     private JButton boton;
     private JLabel resultado;
+    private JComboBox <Persona> lista;
+    private ModeloPersonaCombo modelo;
+    private JTextArea texto;
     
     
     public VentanaSwing() throws HeadlessException {
@@ -30,16 +39,35 @@ public class VentanaSwing extends JFrame {
         setLayout(new FlowLayout(FlowLayout.CENTER));
         cuadro = new JTextField(5);
         ImageIcon icono = new ImageIcon( System.getProperty("user.dir") + "\\src\\ico\\fes\\Swing\\carro.png" );
-        boton = new JButton(icono);
+        boton = new JButton("Convertir", icono);
         //Agragamos un color al boton
         boton.setBackground(Color.GREEN);
         boton.setOpaque(true);
-        //Agramos un tooltip
+        //Agramos un tooltip (Una sugerencia al poner el cursosr sobre el boton)
         boton.setToolTipText("Clic para convertir en °F");
         resultado = new JLabel("°F");
+        
+        texto = new JTextArea(5, 20);
+        
+        //agragamos la lista de JComboBox
+        lista = new JComboBox();
+        
+        /*
+        lista.addItem("Ingenieria");
+        lista.addItem("Derecho");
+        lista.addItem("Periodismo");
+        lista.addItem("Arquitectura");
+        */
+        modelo = new ModeloPersonaCombo();
+        modelo.consultarBaseDatos();
+        lista.setModel(modelo);
+
         this.getContentPane().add(cuadro);
         this.getContentPane().add(boton);
         this.getContentPane().add(resultado);
+        this.getContentPane().add(lista);
+        this.getContentPane().add(texto);
+        
         this.validate();
         this.setVisible(true);
         
@@ -50,7 +78,24 @@ public class VentanaSwing extends JFrame {
                 System.exit(0);
             }
             
+        });            
+        
+        
+
+        
+        
+        this.lista.addItemListener(new ItemAdapter() {
+        
+            @Override
+            public void itemStateChanged(ItemEvent ie) {
+                System.out.println("evento..." + ie.getItem());
+                texto.setText(ie.getItem() + "\n");
+            }
+            
         });
+        
+        
+        
         
         this.boton.addMouseListener(new MouseAdapter() {
             @Override

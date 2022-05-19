@@ -15,6 +15,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 
+
 public class VentanaVersion2 extends Frame {
     
     private TextField cuadroTexto;
@@ -25,28 +26,26 @@ public class VentanaVersion2 extends Frame {
     public VentanaVersion2() throws HeadlessException {
     
         this.setTitle("Ventana con eventos v2");
-        this.setSize(300, 200);
+        this.setSize(300, 220);
         layout = new FlowLayout(FlowLayout.LEFT);
+        cuadroTexto = new TextField( 15 );
+        boton1 = new Button("Presioname");
+        etiqueta = new Label( "Texto inical" );
+        
         this.setLayout(layout);
-        cuadroTexto = new TextField(15);
         this.add(cuadroTexto);
-        boton1 = new Button("Presioname!");
         this.add(boton1);
-        etiqueta = new Label("Texto inicial");
         this.add(etiqueta);
         
+        //Objeto anonimo
         this.boton1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 etiqueta.setText("Hola " + cuadroTexto.getText());
-                System.out.println("Coordenadas x=" + e.getX());
-                System.out.println("Coordenadas y=" + e.getY());
-                System.out.println("Boton presionado" + e.getButton());
-                
-             
+                System.out.println("Coordenas x = "+ e.getX());
+                System.out.println("Coordenas y = "+ e.getY());
+                System.out.println("Boton presionado: " + e.getButton());
             }
-        
-            
             
         });
         
@@ -55,24 +54,25 @@ public class VentanaVersion2 extends Frame {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
-        
-        
-        
+            
         });
+        
         this.cuadroTexto.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
-                System.out.println(e.getKeyChar());
-                System.out.println(e.getKeyCode());
+                System.out.println( e.getKeyChar());
             }
-            
             
         });
         
-        
         this.setVisible(true);
+        
     
     }
+
+    
+    
+    
     
     
     
